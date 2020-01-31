@@ -1,0 +1,8 @@
+ABTA1 / non reconnu sur 1 pt mais pas d'authentification, attaque ?... correction, attaque envoyée
+FP1A1 / refusé
+FP1A2 / refusé
+HKT2A1 fusion avec HKT2A2
+HKT2A2 / contesté, mais nous la réaffirmons avec un autre process de C, pas de réponse
+RRV2A1 / accepté
++ protocole non exécutable
++ protocole ne répondant pas à l'énoncé
