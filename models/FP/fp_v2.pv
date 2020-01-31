@@ -1,0 +1,74 @@
+(**************************************)
+(*       Securite des protocoles      *)
+(*          FPV2 Protocol             *)
+(*                                    *)
+(*   1. A -> B : {|A, Na|}pk(B)       *)
+(*   2. B -> S : B, {|A, Nb|}Kbs      *)
+(*   3. S -> A : {|B, Nb|}Kas         *)
+(*   4. A -> B : {Nb}pk(B)            *)
+(*                                    *)
+(**************************************)
+
+free c: channel.
+
+type key.
+type pkey.
+type skey.
+type host.
+type nonce.
+
+fun nonce_to_bitstring(nonce): bitstring [data,typeConverter].
+
+(* Shared key encryption *)
+fun ltk(host):key   [private]. (* symmetric key *)
+fun encrypt(bitstring,key): bitstring.(* symmetric encryption *)
+fun decrypt(bitstring,key): bitstring. (* symmetric decryption *)
+equation forall x:bitstring, y:key; decrypt(encrypt(x,y),y) = x.
+
+(* Asymmetric encryption *)
+fun aenc(bitstring, pkey):bitstring. (* asymmetric encryption *)
+fun adec(bitstring, skey):bitstring. (* asymmetric decryption *)
+fun pk(host):pkey.
+fun sk(host):skey [private].
+equation forall x:bitstring, y:host; adec(aenc(x,pk(y)),sk(y)) = x.
+
+(* Events *)
+
+event startA(host,host,bitstring,bitstring,key).
+event acceptA(host,host,bitstring,bitstring,key).
+
+event startB(host,host,bitstring,bitstring,key).
+event acceptB(host,host,bitstring,bitstring,key).
+
+(* Secrecy assumptions *)
+
+
+(* hosts *)
+free a, b, d: host.
+
+(* Queries *)
+
+let ProcessInitiator(i1: host, r2: host) =
+    new na: nonce;
+    out(c, aenc((i1, na), pk(r2)));
+    in(c, x:bitstring);
+    let (=r2, nb: bitstring) = decrypt(x, ltk(i1)) in
+    out(c, aenc(nb, pk(r2))).
+
+let ProcessResponder(r2: host) = 
+    in(c, x: bitstring);
+    let(i1: host, na: bitstring) = adec(x, sk(r2)) in
+    new nb: bitstring;
+    out(c, (r2, encrypt((i1, nb), ltk(r2))));
+    in(c, y:bitstring);
+    let (=nb) = adec(y, sk(r2)) in 0. 
+
+
+let ProcessServer() =
+    in(c, (r2: host, x: bitstring));
+    let (i1: host, nb: nonce) = decrypt(x, ltk(r2)) in
+    out(c, encrypt((r2, nb), ltk(i1))).
+
+
+(* main process *)
+process (! in(c, xa:host); in(c, xb:host); ProcessInitiator(xa, xb) | (! in (c, xc:host); ProcessResponder(xc) ) | out(c, sk(d)) | !ProcessServer())
