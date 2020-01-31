@@ -47,8 +47,7 @@ free a, b, d: host.
 (* Queries *)
  query x:bitstring, y:bitstring; inj-event(acceptA(a,b,x,y)) ==> inj-event(startB(a,b,x,y)).
  query x:bitstring; inj-event(acceptB(a,b,x)) ==> inj-event(startA(a,b,x)).
- query attacker(new na).
- query attacker(new nb).
+ query attacker((new na, new nb)).
 
 let ProcessInitiator(i1: host, r2: host) =
     new na: bitstring;
