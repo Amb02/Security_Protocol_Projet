@@ -1,10 +1,15 @@
-(**************************************)
-(*       Securite des protocoles      *)
-(*     Insert name of protocol        *)
-(*                                    *)
-(*     Insert protocol description    *)
-(*                                    *)
-(**************************************)
+(********************************************)
+(*          Securite des protocoles         *)
+(*               KWZ2 protocol              *)
+(*                                          *)
+(*   1. A -> B : {A, {Na}Kas}pk(B)          *)
+(*   2. B -> S : {B, {A, ({Na}Kas, Nb)}}Kbs *)
+(*   3. S -> B : {Kab, A}Kbs                *)
+(*   4. S -> A : {Kab, (Nb, Na)}Kas         *)
+(*   5. A -> B : {Nb}Kab                    *)
+(*                                          *)
+(*   secret :  Kab                          *)
+(********************************************)
 
 free c: channel.
 
@@ -45,16 +50,33 @@ free a, b, d: host.
 (*
 query x:bitstring, y:bitstring; inj-event(acceptA(a,b,x,y)) ==> inj-event(startB(a,b,x,y)).
 query x:bitstring; inj-event(acceptB(a,b,x)) ==> inj-event(startA(a,b,x)).
-query attacker((na, nb))
 *)
+query attacker(new k).
 
-let ProcessInitiator(i1: host, r2: host) = 0.
+let ProcessInitiator(i1: host, r2: host) =
+  new na:bitstring;
+  out(c, aenc((i1, encrypt(na,ltk(i1))), pk(r2)));
+  in(c, x:bitstring);
+  let (k: key, (nb:bitstring, =na)) = decrypt(x, ltk(i1)) in
+  out(c, encrypt(nb, k)).
 
-let ProcessResponder(r2: host) = 0.
+let ProcessResponder(r2: host) =
+  in(c, x:bitstring);
+  let (i1:host, y:bitstring) = adec(x, sk(r2)) in
+  new nb:bitstring;
+  out(c, (i1, encrypt((i1, (y, nb)), ltk(r2))));
+  in(c, z:bitstring);
+  let (k: key, =i1) = decrypt(z, ltk(r2)) in
+  in(c, x1:bitstring);
+  let (=nb) = decrypt(x1, k) in 0.
 
-
-let ProcessServer() = 0.
-
+let ProcessServer() =
+  in(c, (r2:host, x:bitstring));
+  let (i1:host, (y:bitstring, nb:bitstring)) = decrypt(x, ltk(r2)) in
+  let (na:bitstring) = decrypt(y, ltk(i1)) in
+  new k:key;
+  out(c, encrypt((k, i1), ltk(r2)));
+  out(c, encrypt((k, (nb, na)), ltk(i1))).
 
 (* main process *)
 process (! in(c, xa:host); in(c, xb:host); ProcessInitiator(xa, xb) | (! in (c, xc:host); ProcessResponder(xc) ) | out(c, sk(d)) | !ProcessServer())
