@@ -59,7 +59,7 @@ let ProcessInitiator(i1: host, r1: host) =
 	
 	out(c, aenc(encrypt(na, k), pk(r1)) );
     in(c, nax:bitstring);
-	if na = adec( decrypt(nax, k), sk(i1)) then event acceptA(i1, r1, na, nb, k).
+	if na = adec( nax, sk(i1)) then event acceptA(i1, r1, na, nb, k).
 
 
 let ProcessResponder(r2: host) =
@@ -71,7 +71,7 @@ let ProcessResponder(r2: host) =
 
 	out(c, aenc(encrypt(nb, k), pk(i2)) );
     in(c, nbx:bitstring);
-	let (=nb) = adec( decrypt(nbx, k), sk(r2)) in
+	let (=nb) = adec( nbx, sk(r2)) in
 
     in(c, nax:bitstring);
 	let (na: bitstring) = adec( decrypt(nax, k), sk(r2) ) in
