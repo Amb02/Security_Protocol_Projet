@@ -1,0 +1,89 @@
+(**************************************)
+(*       Securite des protocoles      *)
+(*     Insert name of protocol        *)
+(*                                    *)
+(*     Insert protocol description    *)
+(*                                    *)
+(**************************************)
+
+free c: channel.
+
+type key.
+type pkey.
+type skey.
+type host.
+
+
+(* Shared key encryption *)
+fun ltk(host):key   [private]. (* symmetric key *)
+fun encrypt(bitstring,key): bitstring.(* symmetric encryption *)
+fun decrypt(bitstring,key): bitstring. (* symmetric decryption *)
+equation forall x:bitstring, y:key; decrypt(encrypt(x,y),y) = x.
+
+(* Asymetric encryption *)
+fun aenc(bitstring, pkey):bitstring. (* asymmetric encryption *)
+fun adec(bitstring, skey):bitstring. (* asymmetric decryption *)
+fun pk(host):pkey.
+fun sk(host):skey [private].
+equation forall x:bitstring, y:host; adec(aenc(x,pk(y)),sk(y)) = x.
+
+(* Events *)
+
+event startA	(host,host,bitstring, key).
+event acceptA	(host,host,bitstring,bitstring, key).
+event startB	(host,host,bitstring,key).
+event acceptB	(host,host,bitstring,bitstring, key).
+
+event connection(host, host, key).
+
+(* Secrecy assumptions *)
+
+
+(* hosts *)
+free a, b, d: host.
+
+(* Queries *)
+query na:bitstring, nb:bitstring, k:key;		inj-event(acceptA(a, b, na, nb, k)) ==> inj-event(startB(a, b, nb, k)).
+query na:bitstring, nb:bitstring, k:key; 		inj-event(acceptB(a, b, na, nb, k)) ==> inj-event(startA(a ,b ,na, k)).
+query xa:host, xb:host, k:key; 					event(connection(xa, xb, k)) && attacker(k) ==> (xa=d || xb=d).
+
+let ProcessInitiator(i1: host, r1: host) =
+	new k : key;
+	new na : bitstring;
+	event startA(i1, r1, na, k);
+	out(c, (i1, encrypt( (r1, k), ltk(i1) ) ) );
+
+	in(c, nbx:bitstring);
+	let (nb: bitstring) = adec( decrypt(nbx, k), sk(i1) ) in
+	out(c, aenc(nb, pk(r1)) );
+	
+	out(c, aenc(encrypt(na, k), pk(r1)) );
+    in(c, nax:bitstring);
+	if na = adec( nax, sk(i1)) then event acceptA(i1, r1, na, nb, k).
+
+
+let ProcessResponder(r2: host) =
+	new nb : bitstring;
+    in(c, x:bitstring);
+	let (i2: host, k: key) = decrypt(x, ltk(r2)) in
+	event connection(i2, r2, k);
+	event startB(i2, r2, nb, k);
+
+	out(c, aenc(encrypt(nb, k), pk(i2)) );
+    in(c, nbx:bitstring);
+	let (=nb) = adec( nbx, sk(r2)) in
+
+    in(c, nax:bitstring);
+	let (na: bitstring) = adec( decrypt(nax, k), sk(r2) ) in
+	out(c, aenc(na, pk(i2)) );
+	event acceptB(i2, r2, na, nb, k).
+
+
+let ProcessServer() =
+	in(c, (i: host, x:bitstring));
+	let(r: host, k:key) = decrypt(x, ltk(i)) in
+	out(c, encrypt((i, k), ltk(r)) ).
+
+
+(* main process *)
+process (! in(c, xa:host); in(c, xb:host); ProcessInitiator(xa, xb) | (! in (c, xc:host); ProcessResponder(xc) ) | out(c, sk(d)) | !ProcessServer())
