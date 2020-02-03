@@ -38,6 +38,8 @@ event acceptA(host,host,bitstring,bitstring).
 event startB(host,host,bitstring,bitstring).
 event acceptB(host,host,bitstring).
 
+event connection(host, host, bitstring, bitstring).
+
 (* Secrecy assumptions *)
 
 
@@ -45,9 +47,9 @@ event acceptB(host,host,bitstring).
 free a, b, d: host.
 
 (* Queries *)
- query x:bitstring, y:bitstring; inj-event(acceptA(a,b,x,y)) ==> inj-event(startB(a,b,x,y)).
- query x:bitstring; inj-event(acceptB(a,b,x)) ==> inj-event(startA(a,b,x)).
- query attacker((new na, new nb)).
+query xa:host, xb:host, nxa:bitstring, nxb: bitstring; event(connection(xa, xb, nxa, nxb)) && attacker((nxa, nxb)) ==> (xa=d || xb=d).
+query x:bitstring, y:bitstring; inj-event(acceptA(a,b,x,y)) ==> inj-event(startB(a,b,x,y)).
+query x:bitstring; inj-event(acceptB(a,b,x)) ==> inj-event(startA(a,b,x)).
 
 let ProcessInitiator(i1: host, r2: host) =
     new na: bitstring;
@@ -63,6 +65,7 @@ let ProcessResponder(r2: host) =
     let(i1: host, na: bitstring) = adec(x, sk(r2)) in
     new nb: bitstring;
     event startB(i1,r2,na,nb);
+	event connection(i1, r2, na, nb);
     out(c, (r2, encrypt((i1, nb), ltk(r2))));
     in(c, y:bitstring);
     let (=nb) = adec(y, sk(r2)) in
