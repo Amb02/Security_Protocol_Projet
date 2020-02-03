@@ -7,6 +7,7 @@
 (*   3. S -> A : {|B, Nb|}Kas         *)
 (*   4. A -> B : {Nb}pk(B)            *)
 (*                                    *)
+(*   secret : (Na, Nb)                *)
 (**************************************)
 
 free c: channel.
@@ -60,7 +61,7 @@ let ProcessInitiator(i1: host, r2: host) =
     event acceptA(i1,r2,na,nb);
     out(c, aenc(nb, pk(r2))).
 
-let ProcessResponder(r2: host) = 
+let ProcessResponder(r2: host) =
     in(c, x: bitstring);
     let(i1: host, na: bitstring) = adec(x, sk(r2)) in
     new nb: bitstring;

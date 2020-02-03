@@ -1,0 +1,60 @@
+(**************************************)
+(*       Securite des protocoles      *)
+(*     Insert name of protocol        *)
+(*                                    *)
+(*     Insert protocol description    *)
+(*                                    *)
+(**************************************)
+
+free c: channel.
+
+type key.
+type pkey.
+type skey.
+type host.
+
+
+(* Shared key encryption *)
+fun ltk(host):key   [private]. (* symmetric key *)
+fun encrypt(bitstring,key): bitstring.(* symmetric encryption *)
+fun decrypt(bitstring,key): bitstring. (* symmetric decryption *)
+equation forall x:bitstring, y:key; decrypt(encrypt(x,y),y) = x.
+
+(* Asymetric encryption *)
+fun aenc(bitstring, pkey):bitstring. (* asymmetric encryption *)
+fun adec(bitstring, skey):bitstring. (* asymmetric decryption *)
+fun pk(host):pkey.
+fun sk(host):skey [private].
+equation forall x:bitstring, y:host; adec(aenc(x,pk(y)),sk(y)) = x.
+
+(* Events *)
+
+event startA(host,host,bitstring).
+event acceptA(host,host,bitstring,bitstring).
+
+event startB(host,host,bitstring,bitstring).
+event acceptB(host,host,bitstring).
+
+(* Secrecy assumptions *)
+
+
+(* hosts *)
+free a, b, d: host.
+
+(* Queries *)
+(*
+query x:bitstring, y:bitstring; inj-event(acceptA(a,b,x,y)) ==> inj-event(startB(a,b,x,y)).
+query x:bitstring; inj-event(acceptB(a,b,x)) ==> inj-event(startA(a,b,x)).
+query attacker((na, nb))
+*)
+
+let ProcessInitiator(i1: host, r2: host) = 0.
+
+let ProcessResponder(r2: host) = 0.
+
+
+let ProcessServer() = 0.
+
+
+(* main process *)
+process (! in(c, xa:host); in(c, xb:host); ProcessInitiator(xa, xb) | (! in (c, xc:host); ProcessResponder(xc) ) | out(c, sk(d)) | !ProcessServer())
