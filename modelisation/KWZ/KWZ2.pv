@@ -65,7 +65,7 @@
 		in(c, x:bitstring);
 		let (i1:host, y:bitstring) = adec(x, sk(r2)) in
 		event startB(i1, r2, nb);
-		out(c, (i1, encrypt((i1, (y, nb)), ltk(r2))));
+		out(c, (r2, encrypt((i1, (y, nb)), ltk(r2))));
 		in(c, z:bitstring);
 		let (k: key, =i1) = decrypt(z, ltk(r2)) in
 		in(c, x1:bitstring);

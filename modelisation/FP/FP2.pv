@@ -54,17 +54,17 @@ query x:bitstring; inj-event(acceptB(a,b,x)) ==> inj-event(startA(a,b,x)).
 
 let ProcessInitiator(i1: host, r2: host) =
     new na: bitstring;
-    out(c, aenc((i1, na), pk(r2)));
     event startA(i1,r2,na);
+    out(c, aenc((i1, na), pk(r2)));
     in(c, x:bitstring);
     let (=r2, nb: bitstring) = decrypt(x, ltk(i1)) in
-    event acceptA(i1,r2,na,nb);
-    out(c, aenc(nb, pk(r2))).
+    out(c, aenc(nb, pk(r2)));
+    event acceptA(i1,r2,na,nb).
 
 let ProcessResponder(r2: host) =
+    new nb: bitstring;
     in(c, x: bitstring);
     let(i1: host, na: bitstring) = adec(x, sk(r2)) in
-    new nb: bitstring;
     event startB(i1,r2,na,nb);
 	event connection(i1, r2, na, nb);
     out(c, (r2, encrypt((i1, nb), ltk(r2))));
