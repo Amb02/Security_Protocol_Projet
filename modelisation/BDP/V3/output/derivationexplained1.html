@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+		      <html>
+		    <head>
+		    <title>ProVerif: derivation for query 1</title>
+		    <link rel="stylesheet" href="cssproverif.css">
+									   </head>
+									 <body>
+									 <H1>Explained derivation</H1>
+Abbreviations:
+<ul>
+
+<li><span class="var">na_1363</span> <span class="conn">=</span> <span class="name">na</span>[xb = <span class="var">y_1360</span>,xa = <span class="var">y_1360</span>,!1 = <span class="var">@sid_1361</span>]
+</ul>
+
+<ol>
+
+<li><a name=step1>The attacker has some term <span class="var">y_1360</span>.<br>
+<span class="pred">attacker</span>(<span class="var">y_1360</span>).<br>
+
+<li><a name=step2>The attacker has some term <span class="var">nbx_1362</span>.<br>
+<span class="pred">attacker</span>(<span class="var">nbx_1362</span>).<br>
+
+<li><a name=step3>The attacker has some term <span class="var">nbx_1355</span>.<br>
+<span class="pred">attacker</span>(<span class="var">nbx_1355</span>).<br>
+
+<li><a name=step4>The message <span class="var">y_1360</span> that the attacker may have by <a href="#step1">1</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="var">y_1360</span> that the attacker may have by <a href="#step1">1</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+The message <span class="var">nbx_1355</span> that the attacker may have by <a href="#step3">3</a> may be received at input <a href="process_0.html#occ8" target="process" class="occ">{8}</a>.<br>
+So the message <span class="fun">aenc</span>(<span class="var">na_1363</span>,<span class="fun">pk</span>(<span class="var">y_1360</span>)) may be sent to the attacker at output <a href="process_0.html#occ11" target="process" class="occ">{11}</a>.<br>
+<span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">na_1363</span>,<span class="fun">pk</span>(<span class="var">y_1360</span>))).<br>
+
+<li><a name=step5>The message <span class="var">y_1360</span> that the attacker may have by <a href="#step1">1</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="var">y_1360</span> that the attacker may have by <a href="#step1">1</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+The message <span class="var">nbx_1362</span> that the attacker may have by <a href="#step2">2</a> may be received at input <a href="process_0.html#occ8" target="process" class="occ">{8}</a>.<br>
+The message <span class="fun">aenc</span>(<span class="var">na_1363</span>,<span class="fun">pk</span>(<span class="var">y_1360</span>)) that the attacker may have by <a href="#step4">4</a> may be received at input <a href="process_0.html#occ12" target="process" class="occ">{12}</a>.<br>
+So event <span class="fun">reachA</span> may be executed at <a href="process_0.html#occ14" target="process" class="occ">{14}</a>.<br>
+<span class="pred">end</span>(<span class="fun">reachA</span>).<br>
+
+</ol>
+</body>
+</html>

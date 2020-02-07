@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+		      <html>
+		    <head>
+		    <title>ProVerif: clauses for query 2</title>
+		    <link rel="stylesheet" href="cssproverif.css">
+									   </head>
+									 <body>
+									 <H1>Initial clauses</H1>
+
+<ul>
+
+<li><a name=clause0>Clause 0:</a> <span class="pred">attacker</span>(<span class="fun">true</span>)<br>
+<span class="explain">(The attacker applies function <span class="fun">true</span>.)</span><br>
+
+<li><a name=clause1>Clause 1:</a> <span class="pred">attacker</span>(<span class="var">v_1445</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">pk</span>(<span class="var">v_1445</span>))<br>
+<span class="explain">(The attacker applies function <span class="fun">pk</span>.)</span><br>
+
+<li><a name=clause2>Clause 2:</a> <span class="pred">attacker</span>(<span class="fun">false</span>)<br>
+<span class="explain">(The attacker applies function <span class="fun">false</span>.)</span><br>
+
+<li><a name=clause3>Clause 3:</a> <span class="pred">attacker</span>(<span class="var">v_1449</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">v_1450</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="var">v_1449</span>,<span class="var">v_1450</span>))<br>
+<span class="explain">(The attacker applies function <span class="fun">encrypt</span>.)</span><br>
+
+<li><a name=clause4>Clause 4:</a> <span class="pred">attacker</span>(<span class="var">v_1453</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">v_1454</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">decrypt</span>(<span class="var">v_1453</span>,<span class="var">v_1454</span>))<br>
+<span class="explain">(The attacker applies function <span class="fun">decrypt</span>.)</span><br>
+
+<li><a name=clause5>Clause 5:</a> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="var">x_1455</span>,<span class="var">y_1456</span>)) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_1456</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="var">x_1455</span>)<br>
+<span class="explain">(The attacker applies function <span class="fun">decrypt</span>.)</span><br>
+
+<li><a name=clause6>Clause 6:</a> <span class="pred">attacker</span>(<span class="var">v_1459</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">v_1460</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">v_1459</span>,<span class="var">v_1460</span>))<br>
+<span class="explain">(The attacker applies function <span class="fun">aenc</span>.)</span><br>
+
+<li><a name=clause7>Clause 7:</a> <span class="pred">attacker</span>(<span class="var">v_1463</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">v_1464</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">adec</span>(<span class="var">v_1463</span>,<span class="var">v_1464</span>))<br>
+<span class="explain">(The attacker applies function <span class="fun">adec</span>.)</span><br>
+
+<li><a name=clause8>Clause 8:</a> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">x_1465</span>,<span class="fun">pk</span>(<span class="var">y_1466</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">sk</span>(<span class="var">y_1466</span>)) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="var">x_1465</span>)<br>
+<span class="explain">(The attacker applies function <span class="fun">adec</span>.)</span><br>
+
+<li><a name=clause9>Clause 9:</a> <span class="pred">attacker</span>(<span class="var">v_1473</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">v_1474</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">v_1473</span>,<span class="var">v_1474</span>))<br>
+<span class="explain">(The attacker applies function <span class="fun">2-tuple</span>.)</span><br>
+
+<li><a name=clause10>Clause 10:</a> <span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">v_1475</span>,<span class="var">v_1476</span>)) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="var">v_1475</span>)<br>
+<span class="explain">(The attacker applies function <span class="fun">1-proj-2-tuple</span>.)</span><br>
+
+<li><a name=clause11>Clause 11:</a> <span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">v_1478</span>,<span class="var">v_1479</span>)) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="var">v_1479</span>)<br>
+<span class="explain">(The attacker applies function <span class="fun">2-proj-2-tuple</span>.)</span><br>
+
+<li><a name=clause12>Clause 12:</a> <span class="pred">mess</span>(<span class="var">v_1482</span>,<span class="var">v_1481</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">v_1482</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="var">v_1481</span>)<br>
+<span class="explain">(The attacker can listen on all channels it has.)</span><br>
+
+<li><a name=clause13>Clause 13:</a> <span class="pred">attacker</span>(<span class="var">v_1484</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">v_1483</span>) <span class="conn">-&gt;</span> <span class="pred">mess</span>(<span class="var">v_1484</span>,<span class="var">v_1483</span>)<br>
+<span class="explain">(The attacker can send messages it has on all channels it has.)</span><br>
+
+<li><a name=clause14>Clause 14:</a> <span class="pred">attacker</span>(<span class="fun">fail-any</span>)<br>
+<span class="explain">(Initial knowledge of the attacker.)</span><br>
+
+<li><a name=clause15>Clause 15:</a> <span class="pred">attacker</span>(<span class="name">d</span>[])<br>
+<span class="explain">(Initial knowledge of the attacker.)</span><br>
+
+<li><a name=clause16>Clause 16:</a> <span class="pred">attacker</span>(<span class="name">c</span>[])<br>
+<span class="explain">(Initial knowledge of the attacker.)</span><br>
+
+<li><a name=clause17>Clause 17:</a> <span class="pred">attacker</span>(<span class="name">b</span>[])<br>
+<span class="explain">(Initial knowledge of the attacker.)</span><br>
+
+<li><a name=clause18>Clause 18:</a> <span class="pred">attacker</span>(<span class="name">a</span>[])<br>
+<span class="explain">(Initial knowledge of the attacker.)</span><br>
+
+<li><a name=clause19>Clause 19:</a> <span class="pred">equal</span>(<span class="var">v_1486</span>,<span class="var">v_1486</span>)<br>
+<span class="explain">(Definition of equal.)</span><br>
+
+<li><a name=clause20>Clause 20:</a> <span class="pred">attacker</span>(<span class="var">new-name_2122</span>)<br>
+<span class="explain">(The attacker can create new names.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">new-name_2122</span> <span class="conn">=</span> <span class="name">new-name</span>[!att = <span class="var">v_1487</span>]
+</ul>
+
+<li><a name=clause21>Clause 21:</a> <span class="pred">attacker</span>(<span class="var">xb_1539</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_1540</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">xa_1540</span>,<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">xb_1539</span>,<span class="var">k_2123</span>),<span class="fun">ltk</span>(<span class="var">xa_1540</span>))))<br>
+<span class="explain">(If the message <span class="var">xa_1540</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1539</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+then the message <span class="fun"></span>(<span class="var">xa_1540</span>,<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">xb_1539</span>,<span class="var">k_2123</span>),<span class="fun">ltk</span>(<span class="var">xa_1540</span>))) may be sent to the attacker at output <a href="process_0.html#occ7" target="process" class="occ">{7}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">k_2123</span> <span class="conn">=</span> <span class="name">k</span>[xb = <span class="var">xb_1539</span>,xa = <span class="var">xa_1540</span>,!1 = <span class="var">@sid_1541</span>]
+</ul>
+
+<li><a name=clause22>Clause 22:</a> <span class="pred">attacker</span>(<span class="var">nbx_1585</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1586</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_1587</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="fun">decrypt</span>(<span class="fun">adec</span>(<span class="var">nbx_1585</span>,<span class="fun">sk</span>(<span class="var">xa_1587</span>)),<span class="var">k_2124</span>),<span class="fun">pk</span>(<span class="var">xb_1586</span>)))<br>
+<span class="explain">(If the message <span class="var">xa_1587</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1586</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="var">nbx_1585</span> is received from the attacker at input <a href="process_0.html#occ8" target="process" class="occ">{8}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="fun">decrypt</span>(<span class="fun">adec</span>(<span class="var">nbx_1585</span>,<span class="fun">sk</span>(<span class="var">xa_1587</span>)),<span class="var">k_2124</span>),<span class="fun">pk</span>(<span class="var">xb_1586</span>)) may be sent to the attacker at output <a href="process_0.html#occ10" target="process" class="occ">{10}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">k_2124</span> <span class="conn">=</span> <span class="name">k</span>[xb = <span class="var">xb_1586</span>,xa = <span class="var">xa_1587</span>,!1 = <span class="var">@sid_1588</span>]
+</ul>
+
+<li><a name=clause23>Clause 23:</a> <span class="pred">attacker</span>(<span class="var">nbx_1604</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1605</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_1606</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">na_2125</span>,<span class="fun">pk</span>(<span class="var">xb_1605</span>)))<br>
+<span class="explain">(If the message <span class="var">xa_1606</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1605</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="var">nbx_1604</span> is received from the attacker at input <a href="process_0.html#occ8" target="process" class="occ">{8}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="var">na_2125</span>,<span class="fun">pk</span>(<span class="var">xb_1605</span>)) may be sent to the attacker at output <a href="process_0.html#occ11" target="process" class="occ">{11}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">na_2125</span> <span class="conn">=</span> <span class="name">na</span>[xb = <span class="var">xb_1605</span>,xa = <span class="var">xa_1606</span>,!1 = <span class="var">@sid_1607</span>]
+</ul>
+
+<li><a name=clause24>Clause 24:</a> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">x_1678</span>,<span class="fun">pk</span>(<span class="var">y_1679</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1680</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_1679</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="fun">decrypt</span>(<span class="var">x_1678</span>,<span class="var">k_2126</span>),<span class="fun">pk</span>(<span class="var">xb_1680</span>)))<br>
+<span class="explain">(If the message <span class="var">y_1679</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1680</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="var">x_1678</span>,<span class="fun">pk</span>(<span class="var">y_1679</span>)) is received from the attacker at input <a href="process_0.html#occ8" target="process" class="occ">{8}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="fun">decrypt</span>(<span class="var">x_1678</span>,<span class="var">k_2126</span>),<span class="fun">pk</span>(<span class="var">xb_1680</span>)) may be sent to the attacker at output <a href="process_0.html#occ10" target="process" class="occ">{10}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">k_2126</span> <span class="conn">=</span> <span class="name">k</span>[xb = <span class="var">xb_1680</span>,xa = <span class="var">y_1679</span>,!1 = <span class="var">@sid_1681</span>]
+</ul>
+
+<li><a name=clause25>Clause 25:</a> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">x_1697</span>,<span class="fun">pk</span>(<span class="var">y_1698</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1699</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_1698</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">na_2127</span>,<span class="fun">pk</span>(<span class="var">xb_1699</span>)))<br>
+<span class="explain">(If the message <span class="var">y_1698</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1699</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="var">x_1697</span>,<span class="fun">pk</span>(<span class="var">y_1698</span>)) is received from the attacker at input <a href="process_0.html#occ8" target="process" class="occ">{8}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="var">na_2127</span>,<span class="fun">pk</span>(<span class="var">xb_1699</span>)) may be sent to the attacker at output <a href="process_0.html#occ11" target="process" class="occ">{11}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">na_2127</span> <span class="conn">=</span> <span class="name">na</span>[xb = <span class="var">xb_1699</span>,xa = <span class="var">y_1698</span>,!1 = <span class="var">@sid_1700</span>]
+</ul>
+
+<li><a name=clause26>Clause 26:</a> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="fun">encrypt</span>(<span class="var">nb_1763</span>,<span class="var">k_2128</span>),<span class="fun">pk</span>(<span class="var">y_1765</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1764</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_1765</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">nb_1763</span>,<span class="fun">pk</span>(<span class="var">xb_1764</span>)))<br>
+<span class="explain">(If the message <span class="var">y_1765</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1764</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="fun">encrypt</span>(<span class="var">nb_1763</span>,<span class="var">k_2128</span>),<span class="fun">pk</span>(<span class="var">y_1765</span>)) is received from the attacker at input <a href="process_0.html#occ8" target="process" class="occ">{8}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="var">nb_1763</span>,<span class="fun">pk</span>(<span class="var">xb_1764</span>)) may be sent to the attacker at output <a href="process_0.html#occ10" target="process" class="occ">{10}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">k_2128</span> <span class="conn">=</span> <span class="name">k</span>[xb = <span class="var">xb_1764</span>,xa = <span class="var">y_1765</span>,!1 = <span class="var">@sid_1766</span>]
+</ul>
+
+<li><a name=clause27>Clause 27:</a> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="fun">encrypt</span>(<span class="var">nb_1782</span>,<span class="var">k_2130</span>),<span class="fun">pk</span>(<span class="var">y_1784</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1783</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_1784</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">na_2129</span>,<span class="fun">pk</span>(<span class="var">xb_1783</span>)))<br>
+<span class="explain">(If the message <span class="var">y_1784</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1783</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="fun">encrypt</span>(<span class="var">nb_1782</span>,<span class="var">k_2130</span>),<span class="fun">pk</span>(<span class="var">y_1784</span>)) is received from the attacker at input <a href="process_0.html#occ8" target="process" class="occ">{8}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="var">na_2129</span>,<span class="fun">pk</span>(<span class="var">xb_1783</span>)) may be sent to the attacker at output <a href="process_0.html#occ11" target="process" class="occ">{11}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">na_2129</span> <span class="conn">=</span> <span class="name">na</span>[xb = <span class="var">xb_1783</span>,xa = <span class="var">y_1784</span>,!1 = <span class="var">@sid_1785</span>]
+<li><span class="var">k_2130</span> <span class="conn">=</span> <span class="name">k</span>[xb = <span class="var">xb_1783</span>,xa = <span class="var">y_1784</span>,!1 = <span class="var">@sid_1785</span>]
+</ul>
+
+<li><a name=clause28>Clause 28:</a> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_1919</span>,<span class="var">k_1920</span>),<span class="fun">ltk</span>(<span class="var">xc_1921</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xc_1921</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1922</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_1923</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="fun">encrypt</span>(<span class="var">nb_2131</span>,<span class="var">k_1920</span>),<span class="fun">pk</span>(<span class="var">i2_1919</span>)))<br>
+<span class="explain">(If the message <span class="var">xa_1923</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1922</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="var">xc_1921</span> is received from the attacker at input <a href="process_0.html#occ16" target="process" class="occ">{16}</a>,<br>
+the message <span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_1919</span>,<span class="var">k_1920</span>),<span class="fun">ltk</span>(<span class="var">xc_1921</span>)) is received from the attacker at input <a href="process_0.html#occ18" target="process" class="occ">{18}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="fun">encrypt</span>(<span class="var">nb_2131</span>,<span class="var">k_1920</span>),<span class="fun">pk</span>(<span class="var">i2_1919</span>)) may be sent to the attacker at output <a href="process_0.html#occ22" target="process" class="occ">{22}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">nb_2131</span> <span class="conn">=</span> <span class="name">nb_12</span>[xc = <span class="var">xc_1921</span>,!2 = <span class="var">@sid_1924</span>,xb = <span class="var">xb_1922</span>,xa = <span class="var">xa_1923</span>,!1 = <span class="var">@sid_1925</span>]
+</ul>
+
+<li><a name=clause29>Clause 29:</a> <span class="pred">attacker</span>(<span class="var">nax_1969</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">nb_2132</span>,<span class="fun">pk</span>(<span class="var">y_1970</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_1975</span>,<span class="var">k_1976</span>),<span class="fun">ltk</span>(<span class="var">y_1970</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_1970</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1972</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_1973</span>) <span class="conn">-&gt;</span> <span class="pred">end</span>(<span class="fun">reachB</span>)<br>
+<span class="explain">(If the message <span class="var">xa_1973</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1972</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="var">y_1970</span> is received from the attacker at input <a href="process_0.html#occ16" target="process" class="occ">{16}</a>,<br>
+the message <span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_1975</span>,<span class="var">k_1976</span>),<span class="fun">ltk</span>(<span class="var">y_1970</span>)) is received from the attacker at input <a href="process_0.html#occ18" target="process" class="occ">{18}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="var">nb_2132</span>,<span class="fun">pk</span>(<span class="var">y_1970</span>)) is received from the attacker at input <a href="process_0.html#occ23" target="process" class="occ">{23}</a>,<br>
+the message <span class="var">nax_1969</span> is received from the attacker at input <a href="process_0.html#occ25" target="process" class="occ">{25}</a>,<br>
+then event <span class="fun">reachB</span> may be executed at <a href="process_0.html#occ27" target="process" class="occ">{27}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">nb_2132</span> <span class="conn">=</span> <span class="name">nb_12</span>[xc = <span class="var">y_1970</span>,!2 = <span class="var">@sid_1971</span>,xb = <span class="var">xb_1972</span>,xa = <span class="var">xa_1973</span>,!1 = <span class="var">@sid_1974</span>]
+</ul>
+
+<li><a name=clause30>Clause 30:</a> <span class="pred">attacker</span>(<span class="var">nax_1990</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">nb_2133</span>,<span class="fun">pk</span>(<span class="var">y_1991</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_1996</span>,<span class="var">k_1997</span>),<span class="fun">ltk</span>(<span class="var">y_1991</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_1991</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_1993</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_1994</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="fun">adec</span>(<span class="var">nax_1990</span>,<span class="fun">sk</span>(<span class="var">y_1991</span>)),<span class="fun">pk</span>(<span class="var">i2_1996</span>)))<br>
+<span class="explain">(If the message <span class="var">xa_1994</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_1993</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="var">y_1991</span> is received from the attacker at input <a href="process_0.html#occ16" target="process" class="occ">{16}</a>,<br>
+the message <span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_1996</span>,<span class="var">k_1997</span>),<span class="fun">ltk</span>(<span class="var">y_1991</span>)) is received from the attacker at input <a href="process_0.html#occ18" target="process" class="occ">{18}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="var">nb_2133</span>,<span class="fun">pk</span>(<span class="var">y_1991</span>)) is received from the attacker at input <a href="process_0.html#occ23" target="process" class="occ">{23}</a>,<br>
+the message <span class="var">nax_1990</span> is received from the attacker at input <a href="process_0.html#occ25" target="process" class="occ">{25}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="fun">adec</span>(<span class="var">nax_1990</span>,<span class="fun">sk</span>(<span class="var">y_1991</span>)),<span class="fun">pk</span>(<span class="var">i2_1996</span>)) may be sent to the attacker at output <a href="process_0.html#occ28" target="process" class="occ">{28}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">nb_2133</span> <span class="conn">=</span> <span class="name">nb_12</span>[xc = <span class="var">y_1991</span>,!2 = <span class="var">@sid_1992</span>,xb = <span class="var">xb_1993</span>,xa = <span class="var">xa_1994</span>,!1 = <span class="var">@sid_1995</span>]
+</ul>
+
+<li><a name=clause31>Clause 31:</a> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">na_2007</span>,<span class="fun">pk</span>(<span class="var">y_2008</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">nb_2134</span>,<span class="fun">pk</span>(<span class="var">y_2008</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_2013</span>,<span class="var">k_2014</span>),<span class="fun">ltk</span>(<span class="var">y_2008</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_2008</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_2010</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_2011</span>) <span class="conn">-&gt;</span> <span class="pred">end</span>(<span class="fun">reachB</span>)<br>
+<span class="explain">(If the message <span class="var">xa_2011</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_2010</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="var">y_2008</span> is received from the attacker at input <a href="process_0.html#occ16" target="process" class="occ">{16}</a>,<br>
+the message <span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_2013</span>,<span class="var">k_2014</span>),<span class="fun">ltk</span>(<span class="var">y_2008</span>)) is received from the attacker at input <a href="process_0.html#occ18" target="process" class="occ">{18}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="var">nb_2134</span>,<span class="fun">pk</span>(<span class="var">y_2008</span>)) is received from the attacker at input <a href="process_0.html#occ23" target="process" class="occ">{23}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="var">na_2007</span>,<span class="fun">pk</span>(<span class="var">y_2008</span>)) is received from the attacker at input <a href="process_0.html#occ25" target="process" class="occ">{25}</a>,<br>
+then event <span class="fun">reachB</span> may be executed at <a href="process_0.html#occ27" target="process" class="occ">{27}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">nb_2134</span> <span class="conn">=</span> <span class="name">nb_12</span>[xc = <span class="var">y_2008</span>,!2 = <span class="var">@sid_2009</span>,xb = <span class="var">xb_2010</span>,xa = <span class="var">xa_2011</span>,!1 = <span class="var">@sid_2012</span>]
+</ul>
+
+<li><a name=clause32>Clause 32:</a> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">na_2028</span>,<span class="fun">pk</span>(<span class="var">y_2029</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">nb_2135</span>,<span class="fun">pk</span>(<span class="var">y_2029</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_2034</span>,<span class="var">k_2035</span>),<span class="fun">ltk</span>(<span class="var">y_2029</span>))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">y_2029</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_2031</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_2032</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">na_2028</span>,<span class="fun">pk</span>(<span class="var">i2_2034</span>)))<br>
+<span class="explain">(If the message <span class="var">xa_2032</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_2031</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="var">y_2029</span> is received from the attacker at input <a href="process_0.html#occ16" target="process" class="occ">{16}</a>,<br>
+the message <span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i2_2034</span>,<span class="var">k_2035</span>),<span class="fun">ltk</span>(<span class="var">y_2029</span>)) is received from the attacker at input <a href="process_0.html#occ18" target="process" class="occ">{18}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="var">nb_2135</span>,<span class="fun">pk</span>(<span class="var">y_2029</span>)) is received from the attacker at input <a href="process_0.html#occ23" target="process" class="occ">{23}</a>,<br>
+the message <span class="fun">aenc</span>(<span class="var">na_2028</span>,<span class="fun">pk</span>(<span class="var">y_2029</span>)) is received from the attacker at input <a href="process_0.html#occ25" target="process" class="occ">{25}</a>,<br>
+then the message <span class="fun">aenc</span>(<span class="var">na_2028</span>,<span class="fun">pk</span>(<span class="var">i2_2034</span>)) may be sent to the attacker at output <a href="process_0.html#occ28" target="process" class="occ">{28}</a>.)</span><br>
+Abbreviations:
+<ul>
+
+<li><span class="var">nb_2135</span> <span class="conn">=</span> <span class="name">nb_12</span>[xc = <span class="var">y_2029</span>,!2 = <span class="var">@sid_2030</span>,xb = <span class="var">xb_2031</span>,xa = <span class="var">xa_2032</span>,!1 = <span class="var">@sid_2033</span>]
+</ul>
+
+<li><a name=clause33>Clause 33:</a> <span class="pred">attacker</span>(<span class="var">xb_2061</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_2062</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">sk</span>(<span class="name">d</span>[]))<br>
+<span class="explain">(If the message <span class="var">xa_2062</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_2061</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+then the message <span class="fun">sk</span>(<span class="name">d</span>[]) may be sent to the attacker at output <a href="process_0.html#occ29" target="process" class="occ">{29}</a>.)</span><br>
+
+<li><a name=clause34>Clause 34:</a> <span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">i_2111</span>,<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">r_2112</span>,<span class="var">k_2113</span>),<span class="fun">ltk</span>(<span class="var">i_2111</span>)))) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xb_2114</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_2115</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i_2111</span>,<span class="var">k_2113</span>),<span class="fun">ltk</span>(<span class="var">r_2112</span>)))<br>
+<span class="explain">(If the message <span class="var">xa_2115</span> is received from the attacker at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>,<br>
+the message <span class="var">xb_2114</span> is received from the attacker at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>,<br>
+the message <span class="fun"></span>(<span class="var">i_2111</span>,<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">r_2112</span>,<span class="var">k_2113</span>),<span class="fun">ltk</span>(<span class="var">i_2111</span>))) is received from the attacker at input <a href="process_0.html#occ31" target="process" class="occ">{31}</a>,<br>
+then the message <span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">i_2111</span>,<span class="var">k_2113</span>),<span class="fun">ltk</span>(<span class="var">r_2112</span>)) may be sent to the attacker at output <a href="process_0.html#occ33" target="process" class="occ">{33}</a>.)</span><br>
+
+</ul>
+</body>
+</html>
