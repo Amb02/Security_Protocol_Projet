@@ -63,15 +63,15 @@ let ProcessInitiator(i1: host, r2: host) =
 
 let ProcessResponder(r2: host) =
 	in(c, i1:bitstring);
-	out(c, (r2:host , encrypt((r2,i1),ltk(r2))));
+	out(c, (r2, encrypt((r2,i1),ltk(r2))));
 	in (c, x:bitstring);
-	let (Kab, =i1) = decrypt(x, ltk(r2)) in 0.
+	let (Kab: key, =i1) = decrypt(x, ltk(r2)) in 0.
 
 let ProcessServer() =
 	in(c, (i1:host , x:bitstring));
 	let (=i1, r2:host) = decrypt(x, ltk(i1)) in
-	in (c, (=r2, y:bitstring);
-	let (=r2, =i1) = decrypt(y, ltk(r2));
+	in (c, (=r2, y:bitstring));
+	let (=r2, =i1) = decrypt(y, ltk(r2)) in
 	new Kab:key;
 	out(c,(encrypt((Kab,r2),ltk(i1))));
 	out(c,(encrypt((Kab,i1),ltk(r2)))).
