@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+		      <html>
+		    <head>
+		    <title>ProVerif: derivation for query 2</title>
+		    <link rel="stylesheet" href="cssproverif.css">
+									   </head>
+									 <body>
+									 <H1>Derivation</H1>
+Abbreviations:
+<ul>
+
+<li><span class="var">nb_1235</span> <span class="conn">=</span> <span class="name">nb</span>[xc = <span class="name">b</span>[],!2 = <span class="var">@sid_1223</span>,xb = <span class="var">xb_1221</span>,xa = <span class="var">xa_1222</span>,!1 = <span class="var">@sid_1224</span>]
+</ul>
+<a href="clauses2.html#clause24" target="clauses">clause 24</a> <span class="pred">end</span>(<span class="var">endsid_1234</span>,<span class="fun">acceptB</span>(<span class="name">a</span>[],<span class="name">b</span>[]))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;apply <span class="fun">2-proj-2-tuple</span> <span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">nb_1235</span>,<span class="name">a</span>[]),<span class="fun">ltk</span>(<span class="name">b</span>[])))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="clauses2.html#clause23" target="clauses">clause 23</a> <span class="pred">attacker</span>(<span class="fun"></span>(<span class="name">b</span>[],<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="var">nb_1235</span>,<span class="name">a</span>[]),<span class="fun">ltk</span>(<span class="name">b</span>[]))))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duplicate <span class="pred">attacker</span>(<span class="name">a</span>[])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duplicate <span class="pred">attacker</span>(<span class="name">b</span>[])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;any <span class="pred">attacker</span>(<span class="var">xb_1221</span>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;any <span class="pred">attacker</span>(<span class="var">xa_1222</span>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="clauses2.html#clause18" target="clauses">clause 18</a> <span class="pred">attacker</span>(<span class="name">a</span>[])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="clauses2.html#clause17" target="clauses">clause 17</a> <span class="pred">attacker</span>(<span class="name">b</span>[])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;any <span class="pred">attacker</span>(<span class="var">xb_1230</span>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;any <span class="pred">attacker</span>(<span class="var">xa_1231</span>)<br>
+</body>
+</html>

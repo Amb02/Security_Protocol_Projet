@@ -1,0 +1,256 @@
+digraph {
+graph [ordering = out]
+edge [arrowhead = none, penwidth = 1.6, fontsize = 30]
+node [shape = point, width = 0, height = 0, fontsize = 30]
+Trace [label = <A trace has been found.<br/>
+>, shape = plaintext]
+P0__0 [label = "Honest Process", shape = plaintext]
+P__0 [label = "Attacker", shape = plaintext]
+Trace -> P0__0 [label = "", style = invisible, weight = 100]{rank = same; P0__0 P__0}
+P0__0 -> P0__1 [label = <>, weight = 100]
+P0__1 [label = "!", shape = ellipse]
+{rank = same; P0_1__1 P0_0__1}
+P0_1__1 [label = "", fixedsize = false, width = 0, height = 0, shape = none]
+P0__1 -> P0_1__1 [label = <>]
+P0_0__1 [label = "", fixedsize = false, width = 0, height = 0, shape = none]
+P0__1 -> P0_0__1 [label = <>]
+P0_1__1 -> P0_1__2 [label = <>, weight = 100]
+P0_0__1 -> P0_0__2 [label = <>, weight = 100]
+P__0 -> P__1 [label = <>, weight = 100]
+{rank = same; P__1 P0_0__2 P0_1__2}
+P0_1__2 -> P0_1__3 [label = <>, weight = 100]
+P__1 -> P__2 [label = <>, weight = 100]
+{rank = same; P__2 P0_1__3}
+P0_1__3 -> P__2 [label = <b>, dir = back, arrowhead = normal]
+P0_1__3 -> P0_1__4 [label = <>, weight = 100]
+P0_0__2 -> P0_0__3 [label = <>, weight = 100]
+P__2 -> P__3 [label = <>, weight = 100]
+{rank = same; P__3 P0_0__3 P0_1__4}
+P0_1__4 -> P0_1__5 [label = <>, weight = 100]
+P0_0__3 -> P0_0__4 [label = <>, weight = 100]
+P__3 -> P__4 [label = <>, weight = 100]
+{rank = same; P__4 P0_0__4 P0_1__5}
+P0_1__5 -> P0_1__6 [label = <>, weight = 100]
+P__4 -> P__5 [label = <>, weight = 100]
+{rank = same; P__5 P0_1__6}
+P0_1__6 -> P__5 [label = <a_5063>, dir = back, arrowhead = normal]
+P0_1__6 -> P0_1__7 [label = <>, weight = 100]
+P0_0__4 -> P0_0__5 [label = <>, weight = 100]
+P__5 -> P__6 [label = <>, weight = 100]
+{rank = same; P__6 P0_0__5 P0_1__7}
+/*RPar */
+P0_1__7 -> P0_1_3__7 [label = <>]
+P0_1__7 -> P0_1_2__7 [label = <>]
+P0_1__7 -> P0_1_1__7 [label = <>]
+P0_1__7 -> P0_1_0__7 [label = <>]
+P0_1__7 [label = "", fixedsize = false, width = 0, height = 0, shape = none]
+{rank = same; P0_1_0__7 P0_1_1__7 P0_1_2__7 P0_1_3__7}
+P0_1_0__7 [label = "!", shape = ellipse]
+P0_1_1__7 -> P0_1_1__8 [label = <>, weight = 100]
+P0_1_0__8 [label = "", style = invisible]
+P0_1_0__7 -> P0_1_0__8 [label = <>, weight = 100, style = invisible]
+P0_0__5 -> P0_0__6 [label = <>, weight = 100]
+P__6 -> P__7 [label = <>, weight = 100]
+{rank = same; P__7 P0_0__6 P0_1_0__8 P0_1_1__8}
+P0_1_1__8 -> P0_1_1__9 [label = <>, weight = 100]
+P__7 -> P__8 [label = <>, weight = 100]
+{rank = same; P__8 P0_1_1__9}
+P0_1_1__9 -> P__8 [label = <~M_5153 = sk(d)>, arrowhead = normal]
+P0_1_1__9 -> P0_1_1__10 [label = <>, weight = 100]
+P0_1_0__9 [label = "", style = invisible]
+P0_1_0__8 -> P0_1_0__9 [label = <>, weight = 100, style = invisible]
+P0_0__6 -> P0_0__7 [label = <>, weight = 100]
+P__8 -> P__9 [label = <>, weight = 100]
+{rank = same; P__9 P0_0__7 P0_1_0__9 P0_1_1__10}
+P0_1_1__11 [label = "", width = 0.3, height = 0.3]
+P0_1_1__10 -> P0_1_1__11 [label = <>, weight = 100]
+P0_1_2__7 [label = "!", shape = ellipse]
+P0_1_3__7 -> P0_1_3__8 [label = <>, weight = 100]
+P0_1_3__8 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD>Beginning of process <FONT COLOR="darkgreen">ProcessInitiator</FONT>(b, a_5063)<br/>
+</TD></TR></TABLE>>]
+P0_1_3__8 -> P0_1_3__9 [label = <>, weight = 100]
+P0_1_3__9 -> P0_1_3__10 [label = <>, weight = 100]
+P0_1_2__8 [label = "", style = invisible]
+P0_1_2__7 -> P0_1_2__8 [label = <>, weight = 100, style = invisible]
+P0_1_1__12 [label = "", style = invisible]
+P0_1_1__11 -> P0_1_1__12 [label = <>, weight = 100, style = invisible]
+P0_1_0__10 [label = "", style = invisible]
+P0_1_0__9 -> P0_1_0__10 [label = <>, weight = 100, style = invisible]
+P0_0__7 -> P0_0__8 [label = <>, weight = 100]
+P__9 -> P__10 [label = <>, weight = 100]
+{rank = same; P__10 P0_0__8 P0_1_0__10 P0_1_1__12 P0_1_2__8 P0_1_3__10}
+P0_1_3__10 -> P0_1_3__11 [label = <>, weight = 100]
+P__10 -> P__11 [label = <>, weight = 100]
+{rank = same; P__11 P0_1_3__11}
+P0_1_3__11 -> P__11 [label = <(~M_5157,~M_5158) = (b,encrypt(a_5063,ltk(b)))>, arrowhead = normal]
+P0_1_3__11 -> P0_1_3__12 [label = <>, weight = 100]
+P0_1_2__9 [label = "", style = invisible]
+P0_1_2__8 -> P0_1_2__9 [label = <>, weight = 100, style = invisible]
+P0_1_1__13 [label = "", style = invisible]
+P0_1_1__12 -> P0_1_1__13 [label = <>, weight = 100, style = invisible]
+P0_1_0__11 [label = "", style = invisible]
+P0_1_0__10 -> P0_1_0__11 [label = <>, weight = 100, style = invisible]
+P0_0__8 -> P0_0__9 [label = <>, weight = 100]
+P__11 -> P__12 [label = <>, weight = 100]
+{rank = same; P__12 P0_0__9 P0_1_0__11 P0_1_1__13 P0_1_2__9 P0_1_3__12}
+P0_1_3__13 [label = "", width = 0.3, height = 0.3]
+P0_1_3__12 -> P0_1_3__13 [label = <>, weight = 100]
+P0_0__9 -> P0_0__10 [label = <>, weight = 100]
+P__12 -> P__13 [label = <>, weight = 100]
+{rank = same; P__13 P0_0__10}
+P0_0__10 -> P0_0__11 [label = <>, weight = 100]
+P__13 -> P__14 [label = <>, weight = 100]
+{rank = same; P__14 P0_0__11}
+P0_0__11 -> P__14 [label = <a_5067>, dir = back, arrowhead = normal]
+P0_0__11 -> P0_0__12 [label = <>, weight = 100]
+P__14 -> P__15 [label = <>, weight = 100]
+{rank = same; P__15 P0_0__12}
+P0_0__12 -> P0_0__13 [label = <>, weight = 100]
+P__15 -> P__16 [label = <>, weight = 100]
+{rank = same; P__16 P0_0__13}
+P0_0__13 -> P0_0__14 [label = <>, weight = 100]
+P__16 -> P__17 [label = <>, weight = 100]
+{rank = same; P__17 P0_0__14}
+P0_0__14 -> P__17 [label = <a_5066>, dir = back, arrowhead = normal]
+P0_0__14 -> P0_0__15 [label = <>, weight = 100]
+P__17 -> P__18 [label = <>, weight = 100]
+{rank = same; P__18 P0_0__15}
+/*RPar */
+P0_0__15 -> P0_0_3__15 [label = <>]
+P0_0__15 -> P0_0_2__15 [label = <>]
+P0_0__15 -> P0_0_1__15 [label = <>]
+P0_0__15 -> P0_0_0__15 [label = <>]
+P0_0__15 [label = "", fixedsize = false, width = 0, height = 0, shape = none]
+{rank = same; P0_0_0__15 P0_0_1__15 P0_0_2__15 P0_0_3__15}
+P0_0_0__15 [label = "!", shape = ellipse]
+P0_0_1__15 -> P0_0_1__16 [label = <>, weight = 100]
+P0_0_0__16 [label = "", style = invisible]
+P0_0_0__15 -> P0_0_0__16 [label = <>, weight = 100, style = invisible]
+P__18 -> P__19 [label = <>, weight = 100]
+{rank = same; P__19 P0_0_0__16 P0_0_1__16}
+P0_0_1__16 -> P0_0_1__17 [label = <>, weight = 100]
+P__19 -> P__20 [label = <>, weight = 100]
+{rank = same; P__20 P0_0_1__17}
+P0_0_1__17 -> P__20 [label = <~M_5198 = sk(d)>, arrowhead = normal]
+P0_0_1__17 -> P0_0_1__18 [label = <>, weight = 100]
+P0_0_0__17 [label = "", style = invisible]
+P0_0_0__16 -> P0_0_0__17 [label = <>, weight = 100, style = invisible]
+P__20 -> P__21 [label = <>, weight = 100]
+{rank = same; P__21 P0_0_0__17 P0_0_1__18}
+P0_0_1__19 [label = "", width = 0.3, height = 0.3]
+P0_0_1__18 -> P0_0_1__19 [label = <>, weight = 100]
+P0_0_2__15 [label = "!", shape = ellipse]
+P0_0_2_0__15 [label = "", fixedsize = false, width = 0, height = 0, shape = none]
+P0_0_2__15 -> P0_0_2_0__15 [label = <>, weight = 100]
+P0_0_3__15 -> P0_0_3__16 [label = <>, weight = 100]
+P0_0_3__16 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD>Beginning of process <FONT COLOR="darkgreen">ProcessInitiator</FONT>(a_5067, <br/>
+a_5066)</TD></TR></TABLE>>]
+P0_0_3__16 -> P0_0_3__17 [label = <>, weight = 100]
+P0_0_3__17 -> P0_0_3__18 [label = <>, weight = 100]
+P0_0_2_0__15 -> P0_0_2_0__16 [label = <>, weight = 100]
+P0_0_1__20 [label = "", style = invisible]
+P0_0_1__19 -> P0_0_1__20 [label = <>, weight = 100, style = invisible]
+P0_0_0__18 [label = "", style = invisible]
+P0_0_0__17 -> P0_0_0__18 [label = <>, weight = 100, style = invisible]
+P__21 -> P__22 [label = <>, weight = 100]
+{rank = same; P__22 P0_0_0__18 P0_0_1__20 P0_0_2_0__16 P0_0_3__18}
+P0_0_3__18 -> P0_0_3__19 [label = <>, weight = 100]
+P__22 -> P__23 [label = <>, weight = 100]
+{rank = same; P__23 P0_0_3__19}
+P0_0_3__19 -> P__23 [label = <(~M_5209,~M_5210) = (a_5067,encrypt(a_5066,ltk(<br/>
+a_5067)))>, arrowhead = normal]
+P0_0_3__19 -> P0_0_3__20 [label = <>, weight = 100]
+P0_0_2_0__16 -> P0_0_2_0__17 [label = <>, weight = 100]
+P0_0_1__21 [label = "", style = invisible]
+P0_0_1__20 -> P0_0_1__21 [label = <>, weight = 100, style = invisible]
+P0_0_0__19 [label = "", style = invisible]
+P0_0_0__18 -> P0_0_0__19 [label = <>, weight = 100, style = invisible]
+P__23 -> P__24 [label = <>, weight = 100]
+{rank = same; P__24 P0_0_0__19 P0_0_1__21 P0_0_2_0__17 P0_0_3__20}
+P0_0_3__21 [label = "", width = 0.3, height = 0.3]
+P0_0_3__20 -> P0_0_3__21 [label = <>, weight = 100]
+P0_0_2_0__17 -> P0_0_2_0__18 [label = <>, weight = 100]
+P0_0_1__22 [label = "", style = invisible]
+P0_0_1__21 -> P0_0_1__22 [label = <>, weight = 100, style = invisible]
+P0_0_0__20 [label = "", style = invisible]
+P0_0_0__19 -> P0_0_0__20 [label = <>, weight = 100, style = invisible]
+P__24 -> P__25 [label = <>, weight = 100]
+{rank = same; P__25 P0_0_0__20 P0_0_1__22 P0_0_2_0__18}
+P0_0_2_0__18 -> P0_0_2_0__19 [label = <>, weight = 100]
+P__25 -> P__26 [label = <>, weight = 100]
+{rank = same; P__26 P0_0_2_0__19}
+P0_0_2_0__19 -> P__26 [label = <b>, dir = back, arrowhead = normal]
+P0_0_2_0__19 -> P0_0_2_0__20 [label = <>, weight = 100]
+P0_0_1__23 [label = "", style = invisible]
+P0_0_1__22 -> P0_0_1__23 [label = <>, weight = 100, style = invisible]
+P0_0_0__21 [label = "", style = invisible]
+P0_0_0__20 -> P0_0_0__21 [label = <>, weight = 100, style = invisible]
+P__26 -> P__27 [label = <>, weight = 100]
+{rank = same; P__27 P0_0_0__21 P0_0_1__23 P0_0_2_0__20}
+P0_0_2_0__20 -> P0_0_2_0__21 [label = <>, weight = 100]
+P0_0_2_0__21 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD>Beginning of process <FONT COLOR="darkgreen">ProcessResponder</FONT>(b)</TD></TR></TABLE>>]
+P0_0_2_0__21 -> P0_0_2_0__22 [label = <>, weight = 100]
+P0_0_2_0__22 -> P0_0_2_0__23 [label = <>, weight = 100]
+P0_0_1__24 [label = "", style = invisible]
+P0_0_1__23 -> P0_0_1__24 [label = <>, weight = 100, style = invisible]
+P0_0_0__22 [label = "", style = invisible]
+P0_0_0__21 -> P0_0_0__22 [label = <>, weight = 100, style = invisible]
+P__27 -> P__28 [label = <>, weight = 100]
+{rank = same; P__28 P0_0_0__22 P0_0_1__24 P0_0_2_0__23}
+P0_0_2_0__23 -> P0_0_2_0__24 [label = <>, weight = 100]
+P__28 -> P__29 [label = <>, weight = 100]
+{rank = same; P__29 P0_0_2_0__24}
+P0_0_2_0__24 -> P__29 [label = <aenc(a_5064,pk(b))>, dir = back, arrowhead = normal]
+P0_0_2_0__24 -> P0_0_2_0__25 [label = <>, weight = 100]
+P0_0_1__25 [label = "", style = invisible]
+P0_0_1__24 -> P0_0_1__25 [label = <>, weight = 100, style = invisible]
+P0_0_0__23 [label = "", style = invisible]
+P0_0_0__22 -> P0_0_0__23 [label = <>, weight = 100, style = invisible]
+P__29 -> P__30 [label = <>, weight = 100]
+{rank = same; P__30 P0_0_0__23 P0_0_1__25 P0_0_2_0__25}
+P0_0_2_0__25 -> P0_0_2_0__26 [label = <>, weight = 100]
+P0_0_2_0__26 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD><FONT COLOR="darkgreen">{14}</FONT><FONT COLOR="blue">event</FONT> startB(b,adec(aenc(a_5064,pk(b)),sk(<br/>
+b)))</TD></TR></TABLE>>]
+P0_0_2_0__26 -> P0_0_2_0__27 [label = <>, weight = 100]
+P0_0_2_0__27 -> P0_0_2_0__28 [label = <>, weight = 100]
+P0_0_1__26 [label = "", style = invisible]
+P0_0_1__25 -> P0_0_1__26 [label = <>, weight = 100, style = invisible]
+P0_0_0__24 [label = "", style = invisible]
+P0_0_0__23 -> P0_0_0__24 [label = <>, weight = 100, style = invisible]
+P__30 -> P__31 [label = <>, weight = 100]
+{rank = same; P__31 P0_0_0__24 P0_0_1__26 P0_0_2_0__28}
+P0_0_2_0__28 -> P0_0_2_0__29 [label = <>, weight = 100]
+P__31 -> P__32 [label = <>, weight = 100]
+{rank = same; P__32 P0_0_2_0__29}
+P0_0_2_0__29 -> P__32 [label = <~M_5233 = encrypt(adec(aenc(a_5064,pk(b)),sk(b)),<br/>
+ltk(b))>, arrowhead = normal]
+P0_0_2_0__29 -> P0_0_2_0__30 [label = <>, weight = 100]
+P0_0_1__27 [label = "", style = invisible]
+P0_0_1__26 -> P0_0_1__27 [label = <>, weight = 100, style = invisible]
+P0_0_0__25 [label = "", style = invisible]
+P0_0_0__24 -> P0_0_0__25 [label = <>, weight = 100, style = invisible]
+P__32 -> P__33 [label = <>, weight = 100]
+{rank = same; P__33 P0_0_0__25 P0_0_1__27 P0_0_2_0__30}
+P0_0_2_0__30 -> P0_0_2_0__31 [label = <>, weight = 100]
+P0_0_1__28 [label = "", style = invisible]
+P0_0_1__27 -> P0_0_1__28 [label = <>, weight = 100, style = invisible]
+P0_0_0__26 [label = "", style = invisible]
+P0_0_0__25 -> P0_0_0__26 [label = <>, weight = 100, style = invisible]
+P__33 -> P__34 [label = <>, weight = 100]
+{rank = same; P__34 P0_0_0__26 P0_0_1__28 P0_0_2_0__31}
+P0_0_2_0__31 -> P0_0_2_0__32 [label = <>, weight = 100]
+P__34 -> P__35 [label = <>, weight = 100]
+{rank = same; P__35 P0_0_2_0__32}
+P0_0_2_0__32 -> P__35 [label = <(~M_5158,encrypt((a,a_5064),a_5063)) = (encrypt(<br/>
+a_5063,ltk(b)),encrypt((a,a_5064),a_5063))>, dir = back, arrowhead = normal]
+P0_0_2_0__32 -> P0_0_2_0__33 [label = <>, weight = 100]
+P0_0_1__29 [label = "", style = invisible]
+P0_0_1__28 -> P0_0_1__29 [label = <>, weight = 100, style = invisible]
+P0_0_0__27 [label = "", style = invisible]
+P0_0_0__26 -> P0_0_0__27 [label = <>, weight = 100, style = invisible]
+P__35 -> P__36 [label = <>, weight = 100]
+{rank = same; P__36 P0_0_0__27 P0_0_1__29 P0_0_2_0__33}
+P0_0_2_0__33 -> P0_0_2_0__34 [label = <>, weight = 100]
+P0_0_2_0__34 [color = red, shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD><FONT COLOR="darkgreen">{19}</FONT><FONT COLOR="blue">event</FONT> acceptB(a,b)</TD></TR></TABLE>>]
+P0_0_2_0__34 -> P0_0_2_0__35 [label = <>, weight = 100]
+}

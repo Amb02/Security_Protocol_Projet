@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+		      <html>
+		    <head>
+		    <title>ProVerif: trace for query 2</title>
+		    <link rel="stylesheet" href="cssproverif.css">
+									   </head>
+									 <body>
+									 <H1>Trace</H1>
+<span class="keyword">in</span>(<span class="name">c</span>, <span class="name">b</span>) at <a href="process_0.html#occ2" target="process" class="occ">{2}</a> in copy <span class="name">a_5065</span><br>
+<br>
+<span class="keyword">in</span>(<span class="name">c</span>, <span class="name">a_5063</span>) at <a href="process_0.html#occ3" target="process" class="occ">{3}</a> in copy <span class="name">a_5065</span><br>
+<br>
+<span class="keyword">out</span>(<span class="name">c</span>, <span class="var">~M_5153</span>) with <span class="var">~M_5153</span> = <span class="fun">sk</span>(<span class="name">d</span>) at <a href="process_0.html#occ20" target="process" class="occ">{20}</a> in copy <span class="name">a_5065</span><br>
+<br>
+<span class="keyword">out</span>(<span class="name">c</span>, <span class="fun"></span>(<span class="var">~M_5157</span>,<span class="var">~M_5158</span>)) with <span class="var">~M_5157</span> = <span class="name">b</span>, <span class="var">~M_5158</span> = <span class="fun">encrypt</span>(<span class="name">a_5063</span>,<span class="fun">ltk</span>(<span class="name">b</span>)) at <a href="process_0.html#occ4" target="process" class="occ">{4}</a> in copy <span class="name">a_5065</span><br>
+<br>
+<span class="keyword">in</span>(<span class="name">c</span>, <span class="name">a_5067</span>) at <a href="process_0.html#occ2" target="process" class="occ">{2}</a> in copy <span class="name">a_5068</span><br>
+<br>
+<span class="keyword">in</span>(<span class="name">c</span>, <span class="name">a_5066</span>) at <a href="process_0.html#occ3" target="process" class="occ">{3}</a> in copy <span class="name">a_5068</span><br>
+<br>
+<span class="keyword">out</span>(<span class="name">c</span>, <span class="var">~M_5198</span>) with <span class="var">~M_5198</span> = <span class="fun">sk</span>(<span class="name">d</span>) at <a href="process_0.html#occ20" target="process" class="occ">{20}</a> in copy <span class="name">a_5068</span><br>
+<br>
+<span class="keyword">out</span>(<span class="name">c</span>, <span class="fun"></span>(<span class="var">~M_5209</span>,<span class="var">~M_5210</span>)) with <span class="var">~M_5209</span> = <span class="name">a_5067</span>, <span class="var">~M_5210</span> = <span class="fun">encrypt</span>(<span class="name">a_5066</span>,<span class="fun">ltk</span>(<span class="name">a_5067</span>)) at <a href="process_0.html#occ4" target="process" class="occ">{4}</a> in copy <span class="name">a_5068</span><br>
+<br>
+<span class="keyword">in</span>(<span class="name">c</span>, <span class="name">b</span>) at <a href="process_0.html#occ11" target="process" class="occ">{11}</a> in copy <span class="name">a_5068</span>, <span class="name">a_5062</span><br>
+<br>
+<span class="keyword">in</span>(<span class="name">c</span>, <span class="fun">aenc</span>(<span class="name">a_5064</span>,<span class="fun">pk</span>(<span class="name">b</span>))) at <a href="process_0.html#occ12" target="process" class="occ">{12}</a> in copy <span class="name">a_5068</span>, <span class="name">a_5062</span><br>
+<br>
+<span class="keyword">event</span> <span class="fun">startB</span>(<span class="name">b</span>,<span class="fun">adec</span>(<span class="fun">aenc</span>(<span class="name">a_5064</span>,<span class="fun">pk</span>(<span class="name">b</span>)),<span class="fun">sk</span>(<span class="name">b</span>))) at <a href="process_0.html#occ14" target="process" class="occ">{14}</a> in copy <span class="name">a_5068</span>, <span class="name">a_5062</span><br>
+<br>
+<span class="keyword">out</span>(<span class="name">c</span>, <span class="var">~M_5233</span>) with <span class="var">~M_5233</span> = <span class="fun">encrypt</span>(<span class="fun">adec</span>(<span class="fun">aenc</span>(<span class="name">a_5064</span>,<span class="fun">pk</span>(<span class="name">b</span>)),<span class="fun">sk</span>(<span class="name">b</span>)),<span class="fun">ltk</span>(<span class="name">b</span>)) at <a href="process_0.html#occ15" target="process" class="occ">{15}</a> in copy <span class="name">a_5068</span>, <span class="name">a_5062</span><br>
+<br>
+<span class="keyword">in</span>(<span class="name">c</span>, <span class="fun"></span>(<span class="var">~M_5158</span>,<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="name">a</span>,<span class="name">a_5064</span>),<span class="name">a_5063</span>))) with <span class="var">~M_5158</span> = <span class="fun">encrypt</span>(<span class="name">a_5063</span>,<span class="fun">ltk</span>(<span class="name">b</span>)) at <a href="process_0.html#occ16" target="process" class="occ">{16}</a> in copy <span class="name">a_5068</span>, <span class="name">a_5062</span><br>
+<br>
+<span class="keyword">event</span> <span class="fun">acceptB</span>(<span class="name">a</span>,<span class="name">b</span>) at <a href="process_0.html#occ19" target="process" class="occ">{19}</a> in copy <span class="name">a_5068</span>, <span class="name">a_5062</span> (goal)<br>
+<br>
+The event <span class="fun">acceptB</span>(<span class="name">a</span>,<span class="name">b</span>) is executed in session <span class="name">a_5062</span>.<br>
+A trace has been found.<br>
+</body>
+</html>

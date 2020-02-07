@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+		      <html>
+		    <head>
+		    <title>ProVerif: derivation for query 3</title>
+		    <link rel="stylesheet" href="cssproverif.css">
+									   </head>
+									 <body>
+									 <H1>Explained derivation</H1>
+Abbreviations:
+<ul>
+
+<li><span class="var">nb_6654</span> <span class="conn">=</span> <span class="name">nb_14</span>[!2 = <span class="var">@sid_6631</span>,xb = <span class="var">xb_6632</span>,xa = <span class="var">xa_6633</span>,!1 = <span class="var">@sid_6634</span>]
+<li><span class="var">Kab_6655</span> <span class="conn">=</span> <span class="name">Kab_18</span>[y_17 = <span class="fun">encrypt</span>(<span class="var">nb_6654</span>,<span class="fun">ltk</span>(<span class="name">d</span>[])),x_16 = <span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>)),i1_15 = <span class="var">xa_6640</span>,!2 = <span class="var">@sid_6631</span>,xb = <span class="var">xb_6632</span>,xa = <span class="var">xa_6633</span>,!1 = <span class="var">@sid_6634</span>]
+</ul>
+
+<ol>
+
+<li><a name=step1>The attacker has some term <span class="var">xa_6608</span>.<br>
+<span class="pred">attacker</span>(<span class="var">xa_6608</span>).<br>
+
+<li><a name=step2>The attacker has some term <span class="var">xb_6607</span>.<br>
+<span class="pred">attacker</span>(<span class="var">xb_6607</span>).<br>
+
+<li><a name=step3>The message <span class="var">xa_6608</span> that the attacker may have by <a href="#step1">1</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="var">xb_6607</span> that the attacker may have by <a href="#step2">2</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+So the message <span class="fun">sk</span>(<span class="name">d</span>[]) may be sent to the attacker at output <a href="process_0.html#occ20" target="process" class="occ">{20}</a>.<br>
+<span class="pred">attacker</span>(<span class="fun">sk</span>(<span class="name">d</span>[])).<br>
+
+<li><a name=step4>We assume as hypothesis that<br>
+<span class="pred">attacker</span>(<span class="var">xa_6640</span>).<br>
+
+<li><a name=step5>The attacker has some term <span class="var">xb_6641</span>.<br>
+<span class="pred">attacker</span>(<span class="var">xb_6641</span>).<br>
+
+<li><a name=step6>We assume as hypothesis that<br>
+<span class="pred">attacker</span>(<span class="var">xa_6633</span>).<br>
+
+<li><a name=step7>We assume as hypothesis that<br>
+<span class="pred">attacker</span>(<span class="var">xb_6632</span>).<br>
+
+<li><a name=step8>The attacker initially knows <span class="name">d</span>[].<br>
+<span class="pred">attacker</span>(<span class="name">d</span>[]).<br>
+
+<li><a name=step9>The message <span class="var">xa_6640</span> that the attacker may have by <a href="#step4">4</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="name">d</span>[] that the attacker may have by <a href="#step8">8</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+So the message <span class="fun"></span>(<span class="var">xa_6640</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>))) may be sent to the attacker at output <a href="process_0.html#occ4" target="process" class="occ">{4}</a>.<br>
+<span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">xa_6640</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>)))).<br>
+
+<li><a name=step10>By <a href="#step9">9</a>, the attacker may know <span class="fun"></span>(<span class="var">xa_6640</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>))).<br>
+Using the function <span class="fun">2-proj-2-tuple</span> the attacker may obtain <span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>)).<br>
+<span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>))).<br>
+
+<li><a name=step11>By <a href="#step4">4</a>, the attacker may know <span class="var">xa_6640</span>.<br>
+By <a href="#step10">10</a>, the attacker may know <span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>)).<br>
+Using the function <span class="fun">2-tuple</span> the attacker may obtain <span class="fun"></span>(<span class="var">xa_6640</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>))).<br>
+<span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">xa_6640</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>)))).<br>
+
+<li><a name=step12>The attacker has some term <span class="var">xa_6626</span>.<br>
+<span class="pred">attacker</span>(<span class="var">xa_6626</span>).<br>
+
+<li><a name=step13>The attacker has some term <span class="var">xb_6625</span>.<br>
+<span class="pred">attacker</span>(<span class="var">xb_6625</span>).<br>
+
+<li><a name=step14>The attacker has some term <span class="var">i1_6617</span>.<br>
+<span class="pred">attacker</span>(<span class="var">i1_6617</span>).<br>
+
+<li><a name=step15>The message <span class="var">i1_6617</span> that the attacker may have by <a href="#step14">14</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="name">d</span>[] that the attacker may have by <a href="#step8">8</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+So the message <span class="fun"></span>(<span class="var">i1_6617</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>))) may be sent to the attacker at output <a href="process_0.html#occ4" target="process" class="occ">{4}</a>.<br>
+<span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">i1_6617</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>)))).<br>
+
+<li><a name=step16>By <a href="#step15">15</a>, the attacker may know <span class="fun"></span>(<span class="var">i1_6617</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>))).<br>
+Using the function <span class="fun">2-proj-2-tuple</span> the attacker may obtain <span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>)).<br>
+<span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>))).<br>
+
+<li><a name=step17>By <a href="#step14">14</a>, the attacker may know <span class="var">i1_6617</span>.<br>
+By <a href="#step16">16</a>, the attacker may know <span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>)).<br>
+Using the function <span class="fun">2-tuple</span> the attacker may obtain <span class="fun"></span>(<span class="var">i1_6617</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>))).<br>
+<span class="pred">attacker</span>(<span class="fun"></span>(<span class="var">i1_6617</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>)))).<br>
+
+<li><a name=step18>The message <span class="var">xa_6633</span> that the attacker may have by <a href="#step6">6</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="var">xb_6632</span> that the attacker may have by <a href="#step7">7</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+The message <span class="fun"></span>(<span class="var">i1_6617</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">i1_6617</span>))) that the attacker may have by <a href="#step17">17</a> may be received at input <a href="process_0.html#occ23" target="process" class="occ">{23}</a>.<br>
+So the message <span class="fun">aenc</span>(<span class="var">nb_6654</span>,<span class="fun">pk</span>(<span class="name">d</span>[])) may be sent to the attacker at output <a href="process_0.html#occ25" target="process" class="occ">{25}</a>.<br>
+<span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">nb_6654</span>,<span class="fun">pk</span>(<span class="name">d</span>[]))).<br>
+
+<li><a name=step19>The message <span class="var">xa_6626</span> that the attacker may have by <a href="#step12">12</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="var">xb_6625</span> that the attacker may have by <a href="#step13">13</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+The message <span class="name">d</span>[] that the attacker may have by <a href="#step8">8</a> may be received at input <a href="process_0.html#occ11" target="process" class="occ">{11}</a>.<br>
+The message <span class="fun">aenc</span>(<span class="var">nb_6654</span>,<span class="fun">pk</span>(<span class="name">d</span>[])) that the attacker may have by <a href="#step18">18</a> may be received at input <a href="process_0.html#occ12" target="process" class="occ">{12}</a>.<br>
+So the message <span class="fun">encrypt</span>(<span class="var">nb_6654</span>,<span class="fun">ltk</span>(<span class="name">d</span>[])) may be sent to the attacker at output <a href="process_0.html#occ15" target="process" class="occ">{15}</a>.<br>
+<span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="var">nb_6654</span>,<span class="fun">ltk</span>(<span class="name">d</span>[]))).<br>
+
+<li><a name=step20>The message <span class="var">xa_6633</span> that the attacker may have by <a href="#step6">6</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="var">xb_6632</span> that the attacker may have by <a href="#step7">7</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+The message <span class="fun"></span>(<span class="var">xa_6640</span>,<span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6640</span>))) that the attacker may have by <a href="#step11">11</a> may be received at input <a href="process_0.html#occ23" target="process" class="occ">{23}</a>.<br>
+The message <span class="fun">encrypt</span>(<span class="var">nb_6654</span>,<span class="fun">ltk</span>(<span class="name">d</span>[])) that the attacker may have by <a href="#step19">19</a> may be received at input <a href="process_0.html#occ26" target="process" class="occ">{26}</a>.<br>
+So the message <span class="fun">encrypt</span>(<span class="fun"></span>(<span class="fun"></span>(<span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[])),<span class="var">Kab_6655</span>),<span class="var">nb_6654</span>),<span class="fun">ltk</span>(<span class="var">xa_6640</span>)) may be sent to the attacker at output <a href="process_0.html#occ29" target="process" class="occ">{29}</a>.<br>
+<span class="pred">attacker</span>(<span class="fun">encrypt</span>(<span class="fun"></span>(<span class="fun"></span>(<span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[])),<span class="var">Kab_6655</span>),<span class="var">nb_6654</span>),<span class="fun">ltk</span>(<span class="var">xa_6640</span>))).<br>
+
+<li><a name=step21>The message <span class="var">xa_6640</span> that the attacker may have by <a href="#step4">4</a> may be received at input <a href="process_0.html#occ2" target="process" class="occ">{2}</a>.<br>
+The message <span class="var">xb_6641</span> that the attacker may have by <a href="#step5">5</a> may be received at input <a href="process_0.html#occ3" target="process" class="occ">{3}</a>.<br>
+The message <span class="fun">encrypt</span>(<span class="fun"></span>(<span class="fun"></span>(<span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[])),<span class="var">Kab_6655</span>),<span class="var">nb_6654</span>),<span class="fun">ltk</span>(<span class="var">xa_6640</span>)) that the attacker may have by <a href="#step20">20</a> may be received at input <a href="process_0.html#occ6" target="process" class="occ">{6}</a>.<br>
+So the message <span class="fun"></span>(<span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[])),<span class="fun">encrypt</span>(<span class="var">nb_6654</span>,<span class="var">Kab_6655</span>)) may be sent to the attacker at output <a href="process_0.html#occ9" target="process" class="occ">{9}</a>.<br>
+<span class="pred">attacker</span>(<span class="fun"></span>(<span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[])),<span class="fun">encrypt</span>(<span class="var">nb_6654</span>,<span class="var">Kab_6655</span>))).<br>
+
+<li><a name=step22>By <a href="#step21">21</a>, the attacker may know <span class="fun"></span>(<span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[])),<span class="fun">encrypt</span>(<span class="var">nb_6654</span>,<span class="var">Kab_6655</span>)).<br>
+Using the function <span class="fun">1-proj-2-tuple</span> the attacker may obtain <span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[])).<br>
+<span class="pred">attacker</span>(<span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[]))).<br>
+
+<li><a name=step23>By <a href="#step22">22</a>, the attacker may know <span class="fun">aenc</span>(<span class="var">Kab_6655</span>,<span class="fun">pk</span>(<span class="name">d</span>[])).<br>
+By <a href="#step3">3</a>, the attacker may know <span class="fun">sk</span>(<span class="name">d</span>[]).<br>
+Using the function <span class="fun">adec</span> the attacker may obtain <span class="var">Kab_6655</span>.<br>
+<span class="pred">attacker</span>(<span class="var">Kab_6655</span>).<br>
+
+</ol>
+</body>
+</html>

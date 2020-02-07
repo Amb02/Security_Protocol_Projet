@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+		      <html>
+		    <head>
+		    <title>ProVerif: main result page</title>
+		    <link rel="stylesheet" href="cssproverif.css">
+									   </head>
+									 <body>
+									 <H1>ProVerif results</H1>
+<A HREF="eq.html">Equations & Destructors</A><br>
+<A HREF="process_0.html" TARGET="process">Process</A><br>
+<UL>
+<LI><span class="query">Query inj-event(<span class="fun">acceptA</span>(<span class="name">a</span>[],<span class="name">b</span>[],<span class="var">x_38</span>)) <span class="conn">==&gt;</span> inj-event(<span class="fun">startB</span>(<span class="name">b</span>[],<span class="var">x_38</span>))</span><br>
+<A HREF="clauses1.html" TARGET="clauses">Clauses</A><br>
+<A HREF="compclauses1.html">Completed clauses</A><br>
+<UL>
+<LI>goal reachable: <span class="pred">attacker</span>(<span class="var">x_2953</span>) <span class="conn">-&gt;</span> <span class="pred">end</span>(<span class="var">endsid_2954</span>,<span class="fun">acceptA</span>(<span class="name">a</span>[],<span class="name">b</span>[],<span class="var">x_2953</span>))<br>
+<A HREF="derivation1.html">Derivation</A> <A HREF="derivationexplained1.html">Explained derivation</A><br>
+<A HREF="unifyDeriv1.html" TARGET="unifderiv">Unify derivation</A><br>
+<A HREF="trace1.html">Trace</A><br>
+<A HREF="trace1.pdf">Trace graph</A><br>
+</UL>
+<span class="result">RESULT inj-event(<span class="fun">acceptA</span>(<span class="name">a</span>[],<span class="name">b</span>[],<span class="var">x_38</span>)) <span class="conn">==&gt;</span> inj-event(<span class="fun">startB</span>(<span class="name">b</span>[],<span class="var">x_38</span>)) is <span class="falseresult">false</span>.</span><br>
+<span class="result">RESULT (even event(<span class="fun">acceptA</span>(<span class="name">a</span>[],<span class="name">b</span>[],<span class="var">x_2955</span>)) <span class="conn">==&gt;</span> event(<span class="fun">startB</span>(<span class="name">b</span>[],<span class="var">x_2955</span>)) is <span class="falseresult">false</span>.)</span><br>
+<LI><span class="query">Query inj-event(<span class="fun">acceptB</span>(<span class="name">a</span>[],<span class="name">b</span>[])) <span class="conn">==&gt;</span> inj-event(<span class="fun">startA</span>(<span class="name">a</span>[],<span class="name">b</span>[]))</span><br>
+<A HREF="clauses2.html" TARGET="clauses">Clauses</A><br>
+<A HREF="compclauses2.html">Completed clauses</A><br>
+<UL>
+<LI>goal reachable: <span class="pred">end</span>(<span class="var">endsid_5037</span>,<span class="fun">acceptB</span>(<span class="name">a</span>[],<span class="name">b</span>[]))<br>
+<A HREF="derivation2.html">Derivation</A> <A HREF="derivationexplained2.html">Explained derivation</A><br>
+<A HREF="unifyDeriv2.html" TARGET="unifderiv">Unify derivation</A><br>
+<A HREF="trace2.html">Trace</A><br>
+<A HREF="trace2.pdf">Trace graph</A><br>
+</UL>
+<span class="result">RESULT inj-event(<span class="fun">acceptB</span>(<span class="name">a</span>[],<span class="name">b</span>[])) <span class="conn">==&gt;</span> inj-event(<span class="fun">startA</span>(<span class="name">a</span>[],<span class="name">b</span>[])) is <span class="falseresult">false</span>.</span><br>
+<span class="result">RESULT (even event(<span class="fun">acceptB</span>(<span class="name">a</span>[],<span class="name">b</span>[])) <span class="conn">==&gt;</span> event(<span class="fun">startA</span>(<span class="name">a</span>[],<span class="name">b</span>[])) is <span class="falseresult">false</span>.)</span><br>
+<LI><span class="query">Query <span class="keyword">not </span><span class="pred">attacker</span>(<span class="name">Kab_18</span>[y_17 = <span class="var">v_5889</span>,x_16 = <span class="var">v_5890</span>,i1_15 = <span class="var">v_5891</span>,!2 = <span class="var">v_5892</span>,xb = <span class="var">v_5893</span>,xa = <span class="var">v_5894</span>,!1 = <span class="var">v_5895</span>])</span><br>
+<A HREF="clauses3.html" TARGET="clauses">Clauses</A><br>
+<A HREF="compclauses3.html">Completed clauses</A><br>
+<UL>
+<LI>goal reachable: <span class="pred">attacker</span>(<span class="var">xb_6590</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_6591</span>) <span class="conn">&amp;&amp;</span> <span class="pred">attacker</span>(<span class="var">xa_6592</span>) <span class="conn">-&gt;</span> <span class="pred">attacker</span>(<span class="name">Kab_18</span>[y_17 = <span class="fun">encrypt</span>(<span class="name">nb_14</span>[!2 = <span class="var">@sid_6593</span>,xb = <span class="var">xb_6590</span>,xa = <span class="var">xa_6591</span>,!1 = <span class="var">@sid_6594</span>],<span class="fun">ltk</span>(<span class="name">d</span>[])),x_16 = <span class="fun">encrypt</span>(<span class="name">d</span>[],<span class="fun">ltk</span>(<span class="var">xa_6592</span>)),i1_15 = <span class="var">xa_6592</span>,!2 = <span class="var">@sid_6593</span>,xb = <span class="var">xb_6590</span>,xa = <span class="var">xa_6591</span>,!1 = <span class="var">@sid_6594</span>])<br>
+<A HREF="derivation3.html">Derivation</A> <A HREF="derivationexplained3.html">Explained derivation</A><br>
+<A HREF="unifyDeriv3.html" TARGET="unifderiv">Unify derivation</A><br>
+<A HREF="trace3.html">Trace</A><br>
+<A HREF="trace3.pdf">Trace graph</A><br>
+The previous trace falsifies the query, because the query is
+simple and the trace corresponds to the derivation.<br>
+</UL>
+<span class="result">RESULT <span class="keyword">not </span><span class="pred">attacker</span>(<span class="name">Kab_18</span>[y_17 = <span class="var">v_5889</span>,x_16 = <span class="var">v_5890</span>,i1_15 = <span class="var">v_5891</span>,!2 = <span class="var">v_5892</span>,xb = <span class="var">v_5893</span>,xa = <span class="var">v_5894</span>,!1 = <span class="var">v_5895</span>]) is <span class="falseresult">false</span>.</span><br>
+</UL>
+</body>
+</html>
